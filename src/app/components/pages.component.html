@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">webmpcaptains </a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input (click) = 'cambiarIdioma(this.language[0])' class=" mr-2" type="image" src='assets/ingles.png' width="45" height="35" />
+      <input (click) = 'cambiarIdioma(this.language[1])'class=" mr-5" type="image" src='assets/spain.png' width="45" height="35" />
+      <button (click)="logout()" class="btn btn-danger my-2 my-sm-0" type="submit" i18n="@@botonLogout">{{'logoutButton' | translate}}</button>
+    </form>
+
+</nav>
+
+<div class="container" align="center">
+  <div class="row mt-5 ml-5">
+
+  <router-outlet></router-outlet>
+
+  </div>
+
+</div>

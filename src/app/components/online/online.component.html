@@ -1,0 +1,37 @@
+<!--
+  <div class="row mt-3 ml-5" >
+      <div class = "col-6" >
+        <form #f="ngForm" class="form-horizontal form-material" (ngSubmit)="saveData(f)" >
+            <h4>Hub orders</h4>
+            <select [(ngModel)]="pedidoSeleccionado" name="pedido" #hub="ngModel" class="form-control">
+              <option *ngFor="let pedido of this.pedidos" [value]="hub">{{pedido.idPedido}}</option>
+            </select>
+            <button>recoger</button>
+        </form>
+
+
+      </div>
+  </div> -->
+
+
+  <div  class= "row mt-3 container">
+
+    <div class="col-12"  align ="center">
+      <button *ngIf="!online" (click)= "online= !online" class = "btn btn-block btn-success ml-5"> {{'onlineButton' | translate}}</button>
+      <button *ngIf="online" (click)= "online= !online" class = "btn btn-block btn-danger ml-5"> {{'offlineButton' | translate}}</button>
+
+    </div>
+  </div>
+
+
+    <div class= "row container">
+        <div class="col-8">
+          <!-- Aqui va el mapa -->
+          <app-here-map class="ml-5" *ngIf="online" [apikey]="this.apikey" id="map" [lat]="myLat" [lng]="myLong"></app-here-map>
+        </div>
+    </div>
+
+
+
+
+

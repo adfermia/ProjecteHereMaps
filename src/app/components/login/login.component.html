@@ -1,0 +1,38 @@
+<div class= "container" align="center">
+
+  <div class= "row mt-5 ml-5">
+
+    <form #f="ngForm" class="form-horizontal form-material" (ngSubmit)="login(f)">
+
+      <div class="form-group m-t-40">
+          <div class="col-xs-12">
+              <input [(ngModel)]="user.usuario" name="user" #name="ngModel" class="form-control" type="text" required placeholder="User name">
+          </div>
+      </div>
+      <div *ngIf="name?.errors?.required && name.touched"
+         class="alert alert-danger">
+      {{'validUsername' | translate}}
+      </div>
+
+
+      <div class="form-group">
+          <div class="col-xs-12">
+              <input [(ngModel)]="user.password" name="password" #password="ngModel" class="form-control" type="password" required placeholder="Password">
+          </div>
+      </div>
+      <div *ngIf="password?.errors?.required && password.touched"
+         class="alert alert-danger">
+      {{'validPassword' | translate}}
+      </div>
+      <div class="form-group text-center m-t-20">
+        <div class="col-xs-12">
+            <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">{{'login' | translate}}</button>
+        </div>
+      </div>
+      </form>
+
+  </div>
+
+</div>
+
+

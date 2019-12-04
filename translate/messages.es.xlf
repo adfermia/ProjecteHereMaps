@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+    <!--Home-->
+
+    <trans-unit id="welcome" datatype="html">
+        <source> Welcome</source>
+        <target> Bienvenido</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+    </trans-unit>
+    <trans-unit id="login" datatype="html">
+        <source> LOG IN</source>
+        <target> ENTRAR</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+    </trans-unit>
+
+    <!-- Login -->
+    <trans-unit id="logIn" datatype="html">
+        <source> LOG IN</source>
+        <target> ENTRAR</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+    </trans-unit>
+    <trans-unit id="validateUsername" datatype="html">
+        <source> Username is required</source>
+        <target> Nombre de usuario obligatorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+    </trans-unit>
+    <trans-unit id="validatePassword" datatype="html">
+        <source> Password is required</source>
+        <target> Contraseña obligatoria</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+    </trans-unit>
+
+
+    <!-- InputForms -->
+    <trans-unit id="tituloInputsForm" datatype="html">
+        <source> Select Hub</source>
+        <target> Selecciona el Hub</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validateHub" datatype="html">
+        <source> Hub is required</source>
+        <target> El hub es obligatorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tituloPlate" datatype="html">
+        <source> Enter your plate</source>
+        <target> Ingrese la matricula</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validatePlate" datatype="html">
+        <source> Plate is required</source>
+        <target> La matricula es obligatoria</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tituloOdometer" datatype="html">
+        <source> Odometer value</source>
+        <target> Kilometros</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validateOdometer" datatype="html">
+        <source> Odometer is required</source>
+        <target> Campo obligatorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="botonSave" datatype="html">
+        <source> Save Data</source>
+        <target> Guardar Cambios</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/inputs-form/inputs-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+
+      <!-- Online-->
+      <trans-unit id="botonOnline" datatype="html">
+        <source> Go Online!</source>
+        <target> Conectar!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/online/online.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="botonOffline" datatype="html">
+        <source> Go Offline!</source>
+        <target> Desconectar!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/online/online.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+
+      <!-- Pages -->
+      <trans-unit id="botonLogout" datatype="html">
+        <source> Logout</source>
+        <target> Salir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

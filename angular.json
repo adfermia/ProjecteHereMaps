@@ -21,23 +21,34 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/firebase-messaging-sw.js",
+              "src/manifest.json",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
-            "production": {
+            "production-es": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "/es/",
+              "i18nFile": "translate/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error",
               "optimization": true,
               "outputHashing": "all",
+              "outputPath": "dist/browser/es",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
@@ -58,6 +69,7 @@
                 }
               ]
             }
+
           }
         },
         "serve": {
@@ -68,6 +80,9 @@
           "configurations": {
             "production": {
               "browserTarget": "webmpcaptains:build:production"
+            },
+            "es": {
+              "browserTarget": "webmpcaptains:build:production-es"
             }
           }
         },
@@ -86,7 +101,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -116,6 +132,23 @@
           "configurations": {
             "production": {
               "devServerTarget": "webmpcaptains:serve:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/webmpcaptains-server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
             }
           }
         }
