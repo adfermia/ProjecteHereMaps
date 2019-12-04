@@ -43,25 +43,30 @@ getLocation(): Observable<any> {
     this.posicionActual.latitud =  window['android'].getLatitude();
     this.posicionActual.longitud = window['android'].getLongitude();
 
-    console.log('Latitud: ' + this.posicionActual.latitud.valueOf());
-    console.log('Longitud: ' + this.posicionActual.longitud.valueOf());
 
-    // let latitud = window['android'].getLatitud();
-    // let longitud = window['android'].getLongitud();
+    // Ahora como ya tenemos la posicion actual tenemos que comprobar la distancia
+    // entre la anterior posicion y esta
+
+    // distance (lat1, lon1, lat2, lon2)
+
+    // tslint:disable-next-line: max-line-length
 
     return Observable.create(observer => {
+        // tslint:disable-next-line: max-line-length
+        if (this.distance(this.posicionAnterior.latitud, this.posicionAnterior.longitud, this.posicionActual.latitud, this.posicionActual.longitud) > 10) {
 
-      console.log('Anem a intentar retornar el valor rebut per la promesa');
+        observer.next(this.posicionActual);
 
-      console.log('I ja tenim la longitud i la latitud');
+        observer.complete();
 
-      // this.posicionActual.latitud = latitud;
-      // this.posicionActual.longitud = longitud;
-      observer.next(this.posicionActual);
+        } else {
+          observer.next(null);
+          observer.complete();
+        }
+      });
 
-      observer.complete();
-    }
-    );
+
+
 
   } else {
 
@@ -266,7 +271,7 @@ router.calculateRoute(routingParameters, onResult, (error) => {
 distance(lat1, lon1, lat2, lon2) {
 
 
-
+if (lat1 != undefined && lat2 != undefined && lon1 != undefined && lon2 != undefined) {
   if ((lat1 === lat2) && (lon1 === lon2)) {
     return 0;
   } else {
@@ -286,6 +291,10 @@ distance(lat1, lon1, lat2, lon2) {
       console.log('Distancia: ' + dist);
       return dist;
   }
+
+} else {
+  return 0;
+}
 }
 
 mostrarPosiciones() {

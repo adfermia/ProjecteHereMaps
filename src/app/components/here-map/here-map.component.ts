@@ -92,19 +92,25 @@ ngOnInit() {
     this.posicionSuscripcion = timer(0, 5000)
     .subscribe( () => {
 
-        console.log('Leyendo coordenadas');
         this.here.getLocation().subscribe((coordenadas) => {
-        this.myActualPosition.latitud = coordenadas.latitud;
-        this.myActualPosition.longitud = coordenadas.longitud;
+        if (coordenadas != null || coordenadas != undefined) {
 
-        this.here.updateRepartidor( this.myActualPosition.latitud, this.myActualPosition.longitud);
+          this.myActualPosition.latitud = coordenadas.latitud;
+          this.myActualPosition.longitud = coordenadas.longitud;
+
+          this.here.updateRepartidor( this.myActualPosition.latitud, this.myActualPosition.longitud);
 
 
-        // tslint:disable-next-line: max-line-length
-        this.miMarker = new H.map.Marker({lat: this.myActualPosition.latitud, lng: this.myActualPosition.longitud}, {icon: this.iconRepartidor});
-        this.refreshMap();
+          // tslint:disable-next-line: max-line-length
+          this.miMarker = new H.map.Marker({lat: this.myActualPosition.latitud, lng: this.myActualPosition.longitud}, {icon: this.iconRepartidor});
+          this.refreshMap();
+        } else {
+          console.log('Como no se mueve no refrescamos el mapa');
+        }
       });
     });
+
+
   }
 
 
@@ -118,6 +124,8 @@ ngOnInit() {
       this.map = new H.Map(
         this.mapElement.nativeElement,
         this.defaultLayers.vector.normal.map,
+
+        // coordenadas de Madrid, el mapa se muestra centrado y mostrando una vista general de España
         {
           zoom: 4,
           center: { lat: 40.4165000, lng: -3.7025600}
