@@ -1,0 +1,98 @@
+{
+  "configVersion": 1,
+  "timestamp": 1575562403786,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/firebase-messaging-sw.js",
+        "/firebase-messaging.js",
+        "/index.html",
+        "/main.js",
+        "/manifest.webmanifest",
+        "/polyfills-es5.js",
+        "/polyfills.js",
+        "/runtime.js",
+        "/styles.js",
+        "/vendor.js"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/ingles.jpg",
+        "/assets/ingles.png",
+        "/assets/pedido.jpg",
+        "/assets/pedido.png",
+        "/assets/repartidor.png",
+        "/assets/spain.jpg",
+        "/assets/spain.png",
+        "/assets/tienda.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/ingles.jpg": "fca6c527633f80cc8fbd4c4e884bcc65a5c74ec2",
+    "/assets/ingles.png": "2d2c1c9ea22eb805b2b3b3fe33fcd032322539c8",
+    "/assets/pedido.jpg": "4988bb1c0e39a36f7e3d1645354e42ef64012b24",
+    "/assets/pedido.png": "cef2758c5caee26c3669f41c7bfb2822c2d63919",
+    "/assets/repartidor.png": "5de6cbf24e04935322999276ca17c5bdc39b5407",
+    "/assets/spain.jpg": "ea09f1002f1bc84eec38dc03bcaf201a598b9561",
+    "/assets/spain.png": "9d92e5756a3f44604c16f13f0bd7319cf7bcb353",
+    "/assets/tienda.png": "6940d36937f213a22fd08068125f1a10ae0c23d5",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/firebase-messaging-sw.js": "33c8052d136bdc342d2c3a5311aaeb0f211f4865",
+    "/firebase-messaging.js": "83b58a18fc20798b0a84b2b807929c3a46c48a53",
+    "/index.html": "058af389be8889f2f7f8ff5f9444fc3fd0e2d6e1",
+    "/main.js": "84f7061cb13b6150311c920a0e6335c49f55f027",
+    "/manifest.webmanifest": "4d8cfb6ea1226a8c2e720652e0259babf25db9ee",
+    "/polyfills-es5.js": "fd10a5edb3d6fcee8f6f7df7a31c2df0fc03d83f",
+    "/polyfills.js": "d2d119ed358825847e10088e2957288286a74abe",
+    "/runtime.js": "34b2b832551eac40e17e9057171a3853f61a05ae",
+    "/styles.js": "bc80adc8c1f6d1bef8acfbc91eb72ebe6dde9af2",
+    "/vendor.js": "eb77ba8ffff1704601ca6b8a04a4bd59f4f4f5d4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
