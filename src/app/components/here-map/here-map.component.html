@@ -1,15 +1,17 @@
 
-<div class="row mb-3 container">
-    <div class ="col" align ="center">
-      <div  *ngIf="loading" class = "fa-3x"> <i class ="fas fa-spinner fa-spin "></i></div>
-      <div  #map class="map mr-5" id ="map"></div>
+<div class= "container" align="center">
+  <div  class= "row mt-5 ml-5">
+      <div  *ngIf="loading" class = "fa-3x ml-5"> <i class ="fas fa-spinner fa-spin "></i></div>
     </div>
+      <div class="row mt-2 ml-1 mr-1">
+        <div  #map class="map" id ="map"></div>
+      </div>
 </div>
 
 <br>
 
-<div class="row mt-5 ml-5 containeret">
-  <div class ="col" align ="center">
+<div class= "container" align="center">
+  <div  class= "row mt-5 ml-5">
     <form #f="ngForm" class="form-horizontal form-material">
     <button *ngIf="!loading" class="btn btn-primary mr-2 mb-3" (click)="recogerPedido(miMarker, f)">{{'buttonPickUp' | translate}}</button>
     <button *ngIf="!loading" class="btn btn-primary mr-2 mb-3" (click)="entregarPedido()">{{'buttonEntregar' | translate}}</button>

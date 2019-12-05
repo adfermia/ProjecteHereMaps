@@ -6,6 +6,7 @@ import { mergeMapTo } from 'rxjs/operators';
 import { take } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
 
+// Aquesta es la configuracio que hem de gastar per a que funcione el firebase cloud-messaging
 export const firebaseConfig = {
   apiKey: "AIzaSyAe_nW9kpnCDbSyBuAFcwbskz4pCXmNLD4",
   authDomain: "notificationproject-72594.firebaseapp.com",
@@ -66,13 +67,13 @@ export class MessagingService {
     }
   }
 
+  // Funcion que se ejecuta cuando recibimos un mensaje
   receiveMessage() {
 
     if (navigator.userAgent == 'hcapp') {
-
-      console.log('Hola desde el movil');
+      // Como tenemos configurado el cloud-messaging nativamente en android aqui no necesitamos hacer nada
     } else {
-
+      // Esto en cambio se ejecuta cuando estamos en un navegador
       this.angularFireMessaging.messages.subscribe(
         (payload) => {
           console.log('new message received. ', payload);

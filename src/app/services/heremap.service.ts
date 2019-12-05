@@ -46,11 +46,6 @@ getLocation(): Observable<any> {
 
     // Ahora como ya tenemos la posicion actual tenemos que comprobar la distancia
     // entre la anterior posicion y esta
-
-    // distance (lat1, lon1, lat2, lon2)
-
-    // tslint:disable-next-line: max-line-length
-
     return Observable.create(observer => {
         // tslint:disable-next-line: max-line-length
         if (this.distance(this.posicionAnterior.latitud, this.posicionAnterior.longitud, this.posicionActual.latitud, this.posicionActual.longitud) > 10) {
@@ -109,6 +104,7 @@ getDistance( positionA, positionB) {
 // Funcion que lee del localstorage la variable 'hub' en caso de ser igual a oliva, tavernes o Gandia, devuelve un array con solo un marker
 // en la posicion de la tienda.
 // En caso de ser 'all' retornara un array de markers con todas las tiendas.
+
 
 getMarkerTienda() {
   let iconTienda = new H.map.Icon(URL_TIENDA, {size: {w: 56, h: 56}});
@@ -288,7 +284,7 @@ if (lat1 != undefined && lat2 != undefined && lon1 != undefined && lon2 != undef
       dist = dist * 60 * 1.1515;
       dist = dist * 1.609344 ; // Distancia en kilometres
       dist = dist * 1000; // Ho passem a metres
-      console.log('Distancia: ' + dist);
+      console.log('Distancia: ' + dist.toFixed(2));
       return dist;
   }
 
@@ -315,7 +311,6 @@ positionChange(): boolean {
 
       return true;
       } else {
-        console.log('No es mou');
         return false;
       }
 

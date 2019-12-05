@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 const userId = 'user001';
 
 if (navigator.userAgent == 'hcapp') {
-      console.log('hola desde el movil');
+
  } else {
    this.msService.requestPermission(userId);
    this.msService.receiveMessage();

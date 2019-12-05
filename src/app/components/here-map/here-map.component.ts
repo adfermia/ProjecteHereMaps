@@ -19,8 +19,8 @@ declare var H: any;
   selector: 'app-here-map',
   templateUrl: './here-map.component.html',
   styles: [
-    '.map { width: 70vw; height: 50vh; display: block; }',
-    '.container {width: 70vw; height: 50vh; border: 2px}',
+    '.map { width: 50vh; height: 70vh;  }',
+    '.container {width: 50vh; height: 70vh; border: 2px; }',
     '.containeret {width: 70vw; height: 30px; border: 2px}'
   ]
 })
@@ -89,7 +89,7 @@ ngOnInit() {
     this.defaultLayers = this.platform.createDefaultLayers();
 
     // Añadiendo el timer hacemos que lea del observable al inicio y cada 10 segundos
-    this.posicionSuscripcion = timer(0, 5000)
+    this.posicionSuscripcion = timer(0, 2000)
     .subscribe( () => {
 
         this.here.getLocation().subscribe((coordenadas) => {
@@ -105,7 +105,7 @@ ngOnInit() {
           this.miMarker = new H.map.Marker({lat: this.myActualPosition.latitud, lng: this.myActualPosition.longitud}, {icon: this.iconRepartidor});
           this.refreshMap();
         } else {
-          console.log('Como no se mueve no refrescamos el mapa');
+          // console.log('Como no se mueve no refrescamos el mapa');
         }
       });
     });
@@ -309,6 +309,7 @@ ngOnInit() {
         this.añadirTiendas();
         // Si volem posar els incidents de trafic que hi ha en les carreteres
         // this.map.addLayer(this.defaultLayers.vector.normal.trafficincidents);
+
       }
 
       if (this.posicionFinal !== undefined ) {
